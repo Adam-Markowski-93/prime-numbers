@@ -41,6 +41,7 @@ html {
         width: 80%;
         font-size: 20px;
         border: none;
+        border-radius: 20px;
         padding: 10px;
     }
 }
@@ -49,4 +50,26 @@ html {
     flex-grow: 1;
     background-color: white;
     border-radius: 20px;
+    padding: 10px;
+    font-size: 20px;
+    overflow: auto;
+    word-wrap: break-word;
+}
+
+// Scrollbar width
+
+::-webkit-scrollbar {
+    width: 7px;
+}
+
+// Scrollbar track
+
+::-webkit-scrollbar-track {
+    border-radius: 10px;
+    background-color: rgba(180, 180, 180, 0.7);
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: grey;
+    border-radius: 10px;
 }
