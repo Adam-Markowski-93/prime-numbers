@@ -9,4 +9,4 @@ Small program to display prime numbers. Create to practise Java Script (conditio
 
 ## Link
 
-Program able on site: 
+Program able on site: https://lucid-volhard-103b22.netlify.com
