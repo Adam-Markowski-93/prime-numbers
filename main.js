@@ -11,7 +11,7 @@ numberInput.addEventListener("input", (event) => {
     if (inputNumber < 0) {
         return resultDiv.textContent = "Entered number is smaller than 0.";
     }
-    if (!inputNumber) {
+    if (isNaN(inputNumber)) {
         return resultDiv.textContent = "Wrong number format";
     }
 
@@ -19,16 +19,33 @@ numberInput.addEventListener("input", (event) => {
         return resultDiv.textContent = "No primary numbers here";
     }
 
-    let resultArray = [];
 
     primaryTest = (number) => {
 
-        for (let i = 1; i < number; i++) {
-            resultArray.push(i);
+        let resultArray = [];
+        let counter = 0;
+
+        for (let i = 2; i < number; i++) {
+
+            for (let j = 2; j <= (Math.floor(Math.sqrt(i))); j++) {
+                if (i % j === 0) {
+                    counter += 1;
+                }
+            }
+
+            if (counter === 0) {
+                resultArray.push(i);
+            }
+
+            counter = 0;
         }
 
-        resultDiv.textContent = resultArray;
+        return resultArray;
     }
 
-    primaryTest(inputNumber);
+    getPrimeNumbers = () => {
+        resultDiv.textContent = primaryTest(inputNumber);
+    }
+
+    getPrimeNumbers();
 })
