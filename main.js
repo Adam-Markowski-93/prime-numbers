@@ -6,8 +6,6 @@ numberInput.addEventListener("input", (event) => {
 
     const inputNumber = Number(event.target.value);
 
-    // console.log(typeof inputNumber);
-
     if (inputNumber < 0 || inputNumber > 10000) {
         return resultDiv.textContent = "Entered number is smaller than 0 or it is bigger than 10000";
     }
@@ -18,7 +16,6 @@ numberInput.addEventListener("input", (event) => {
     if (inputNumber === 0 || inputNumber == 1) {
         return resultDiv.textContent = "No primary numbers here";
     }
-
 
     primaryTest = (number) => {
 
@@ -36,16 +33,9 @@ numberInput.addEventListener("input", (event) => {
             if (counter === 0) {
                 resultArray.push(" " + i);
             }
-
             counter = 0;
         }
-
         return resultArray;
     }
-
-    getPrimeNumbers = () => {
-        resultDiv.textContent = primaryTest(inputNumber);
-    }
-
-    getPrimeNumbers();
+    resultDiv.textContent = primaryTest(inputNumber);
 })
