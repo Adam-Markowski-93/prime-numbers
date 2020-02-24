@@ -8,8 +8,8 @@ numberInput.addEventListener("input", (event) => {
 
     // console.log(typeof inputNumber);
 
-    if (inputNumber < 0) {
-        return resultDiv.textContent = "Entered number is smaller than 0.";
+    if (inputNumber < 0 || inputNumber > 10000) {
+        return resultDiv.textContent = "Entered number is smaller than 0 or it is bigger than 10000";
     }
     if (isNaN(inputNumber)) {
         return resultDiv.textContent = "Wrong number format";
@@ -34,7 +34,7 @@ numberInput.addEventListener("input", (event) => {
             }
 
             if (counter === 0) {
-                resultArray.push(i);
+                resultArray.push(" " + i);
             }
 
             counter = 0;

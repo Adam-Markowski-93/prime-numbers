@@ -1,3 +1,8 @@
+// Variables
+
+$borderRad: 5px;
+$fontSizeInDiv: 20px;
+
 * {
     margin: 0;
     padding: 0;
@@ -39,9 +44,9 @@ html {
     &__input {
         height: 70%;
         width: 80%;
-        font-size: 20px;
+        font-size: $fontSizeInDiv;
         border: none;
-        border-radius: 20px;
+        border-radius: $borderRad;
         padding: 10px;
     }
 }
@@ -49,11 +54,13 @@ html {
 .result-box {
     flex-grow: 1;
     background-color: white;
-    border-radius: 20px;
+    border-radius: $borderRad;
     padding: 10px;
-    font-size: 20px;
+    font-size: $fontSizeInDiv;
     overflow: auto;
     word-wrap: break-word;
+    text-align: justify;
+
 }
 
 // Scrollbar width
@@ -69,7 +76,9 @@ html {
     background-color: rgba(180, 180, 180, 0.7);
 }
 
+// Scrollbar thumb
+
 ::-webkit-scrollbar-thumb {
-    background-color: grey;
+    background-color: darkblue;
     border-radius: 10px;
 }
